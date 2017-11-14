@@ -1,8 +1,8 @@
 
  
 function getLocation() {
-
-    if (navigator.geolocation) {/*Using HTML Geolocation*/
+   /*Using HTML Geolocation*/
+    if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function (position) {
     var latitude= position.coords.latitude; 
     var longitude= position.coords.longitude;
@@ -15,6 +15,7 @@ function getLocation() {
      $(".content #icon").attr("src",r.weather[0].icon);
      $(".content #icon").attr("alt",r.weather[0].description);
      $(".content .temperature #CF").click(function() {
+      /*push a button to toggle between Fahrenheit and Celsius.*/
           $(".content .temperature #temperature").toggleClass('celcius');
           $(".content .temperature #temperature").toggleClass('fahrenheit');
 
